@@ -64,7 +64,7 @@ local Themes = {
 	},
 	Red = {
     Main = Color3.fromRGB(130, 30, 30),
-    Kavo:DraggingEnabled(Main, Main)
+    Library:DraggingEnabled(Main, Main)
     TabsBackground = Color3.fromRGB(122, 22, 22),
     ScrollBar = Color3.fromRGB(250, 150, 150),
     QuitText = Color3.fromRGB(240, 225, 225),
