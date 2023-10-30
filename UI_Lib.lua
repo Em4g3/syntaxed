@@ -1,6 +1,28 @@
 -- Source code here!
 local Library = {Count = 0, Tab = nil}
 
+-- yoinked from draggable kavo
+function Library:DraggingEnabled(frame, parent)
+        
+    parent = parent or frame
+    
+    local dragging = false
+    local dragInput, mousePos, framePos
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            mousePos = input.Position
+            framePos = parent.Position
+            
+            input.Changed:Connect(function()
+                if input.UserInputState == Enum.UserInputState.End then
+                    dragging = false
+                end
+            end)
+        end
+    end)
+	
 local Themes = {
 	Light = {
 		Main = Color3.fromRGB(190, 190, 190),
@@ -42,6 +64,7 @@ local Themes = {
 	},
 	Red = {
     Main = Color3.fromRGB(130, 30, 30),
+    Kavo:DraggingEnabled(Main, Main)
     TabsBackground = Color3.fromRGB(122, 22, 22),
     ScrollBar = Color3.fromRGB(250, 150, 150),
     QuitText = Color3.fromRGB(240, 225, 225),
