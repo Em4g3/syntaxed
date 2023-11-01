@@ -9,8 +9,9 @@
 ## Supported executors
 ✅ Any PC executor <br>
 ✅ Fluxus (Mobile & PC Version)<br>
-✅ Arceus X<br>
-✅ Delta
+✅ Hydrogen<br>
+✅ Delta<br>
+✅ Codex
 
 ## Key System
 Coming Soon™️
